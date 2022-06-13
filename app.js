@@ -3,13 +3,12 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
-const dotenv = require('dotenv');
 const passport = require('passport');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
 
-dotenv.config();
 const authRouter = require('./routes/auth');
 const postRouter = require('./routes/post');
 
